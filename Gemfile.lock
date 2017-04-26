@@ -1,0 +1,43 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    citybikes_api (2.0.1)
+      httparty (~> 0.13)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    equalizer (0.0.11)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    ice_nine (0.11.2)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
+    telegram-bot-ruby (0.7.2)
+      faraday
+      virtus
+    thread_safe (0.3.6)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  citybikes_api (~> 2.0, >= 2.0.1)
+  telegram-bot-ruby (~> 0.7.2)
+
+RUBY VERSION
+   ruby 2.4.0p0
+
+BUNDLED WITH
+   1.15.0.pre.2
