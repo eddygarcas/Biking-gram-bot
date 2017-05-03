@@ -3,7 +3,7 @@ require_relative 'station_information'
 require_relative 'bicing_stations'
 
 
-TELEGRAM_BOT_TOKEN= "278988714:AAH4grqEHmqWgPXFst_FzhRNop5SeG6iqqo"
+TELEGRAM_BOT_TOKEN= ENV['TELEGRAM_BOT_TOKEN']
 
 class BotMessage
 
