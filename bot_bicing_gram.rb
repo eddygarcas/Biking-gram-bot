@@ -42,6 +42,8 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
       BotMessage.send_station_information(bot, message.chat.id, station)
     end
     case message.text
+      when '/start'
+        bot.api.send_message(chat_id: message.chat.id, text: "Thanks for using BotBicingram. Share your location and I'll show you the closest station" , reply_markup: markup)
       when '/station'
         kb = [Telegram::Bot::Types::KeyboardButton.new(text: 'Share my location', request_location: true),
               [Telegram::Bot::Types::KeyboardButton.new(text: 'Closest station'),Telegram::Bot::Types::KeyboardButton.new(text: 'Next station')]]
