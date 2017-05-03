@@ -3,6 +3,8 @@ class StationInformation
 
   VALID_FIELDS = ['id','empty_slots','free_bikes','latitude','longitude','name']
 
+  @distance = 0
+
   # id
   # empty_slots
   # free_bikes
@@ -23,4 +25,17 @@ class StationInformation
       end
     end
   end
+
+  def distance=dist
+    @distance = (result = dist.round / 1000) > 1 ? "#{result}Km." : "#{dist.round}m."
+  end
+
+  def distance
+    @distance
+  end
+
+  def to_s
+    %Q{At #{distance} in #{name} street, you'll find \nEmpty Slots #{empty_slots} \nFree bikes  #{free_bikes}}
+  end
+
 end
