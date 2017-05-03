@@ -16,7 +16,7 @@ class GiveBicingStationsTest < Test::Unit::TestCase
 
   def test_xclosest_bicing_stations
     BotBicingGram.new
-    pp @stations.closest_station([41.493875,2.074632]
+    pp @stations.closest_station([41.493875,2.074632])
   end
 
   # Called after every test method runs. Can be used to tear
