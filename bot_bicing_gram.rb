@@ -5,7 +5,7 @@ require_relative'bot_message'
 
 
 TELEGRAM_BOT_TOKEN= ENV['TELEGRAM_BOT_TOKEN']
-SIZE_OF_CLOSEST_STATIONS = ENV['N_OF_STATIONS']
+SIZE_OF_CLOSEST_STATIONS= ENV['N_OF_STATIONS']
 
 Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
   station = Array.new
