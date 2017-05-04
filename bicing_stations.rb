@@ -8,8 +8,8 @@ class BicingStations
   def initialize
   end
 
-  def closest_station(telegram_loc)
-    nearby_stations.sort_by{ |station| distance(telegram_loc,station)}.take(2)
+  def closest_station(telegram_loc, taken = 2)
+    nearby_stations.sort_by{ |station| distance(telegram_loc,station)}.take(taken)
   end
 
   private
