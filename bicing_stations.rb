@@ -1,7 +1,7 @@
 require 'citybikes_api'
 require_relative 'station_information'
+require_relative'network_information'
 
-NETWORK_ID = 'bicing'
 
 class BicingStations
 
@@ -9,14 +9,21 @@ class BicingStations
   end
 
   def closest_station(telegram_loc, taken = 2)
-    nearby_stations.sort_by{ |station| distance(telegram_loc,station)}.take(taken)
+    nearby_stations(telegram_loc).sort_by{ |station| distance(telegram_loc,station)}.take(taken)
+  end
+
+  def nearby_network(telegram_loc)
+    parse_networks(CitybikesApi.networks({:fields => "name,location"})).
+    sort_by{ |network| distance(telegram_loc,network)}.first
+  end
+
+  protected
+
+  def nearby_stations(telegram_loc)
+    parse_stations(CitybikesApi.network(nearby_network(telegram_loc).name.downcase))
   end
 
   private
-
-  def nearby_stations
-    parse_stations(CitybikesApi.network(NETWORK_ID))
-  end
 
   def parse_stations(data)
     data.parsed_response['network']['stations'].map {
@@ -24,6 +31,14 @@ class BicingStations
       StationInformation.new(station)
     }
   end
+
+  def parse_networks(data)
+    data.parsed_response['networks'].map {
+        |network|
+     NetworkInformation.new(network)
+    }
+  end
+
 
   def distance telegram_loc, station
     station_loc = [station.latitude,station.longitude]
@@ -42,6 +57,5 @@ class BicingStations
     station.distance=(rm*c)
     station.distance
   end
-
 end
 

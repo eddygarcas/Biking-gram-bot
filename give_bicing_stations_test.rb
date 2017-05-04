@@ -14,11 +14,13 @@ class GiveBicingStationsTest < Test::Unit::TestCase
   end
 
 
-  def test_xclosest_bicing_stations
-    BotBicingGram.new
-    #pp @stations.closest_station([41.493875,2.074632])
+  def  test_xclosest_bicing_stations
+    pp @stations.closest_station([41.493875,2.074632])
   end
 
+  def test_closest_network
+     pp @stations.nearby_network([41.493875,2.074632])
+   end
   # Called after every test method runs. Can be used to tear
   # down fixture information.
 
