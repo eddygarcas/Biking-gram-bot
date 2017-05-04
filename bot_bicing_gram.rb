@@ -11,7 +11,7 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
   station = Array.new
   bot.listen do |message|
     if message.location
-      station = BotHelper.get_stations(message.location, SIZE_OF_CLOSEST_STATIONS)
+      station = BotHelper.get_stations(message.location, SIZE_OF_CLOSEST_STATIONS.to_i)
       BotMessage.send_station_message(bot, message.chat.id, station.reverse!.pop)
     end
     case message.text
