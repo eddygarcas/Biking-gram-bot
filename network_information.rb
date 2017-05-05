@@ -1,7 +1,7 @@
 
 class NetworkInformation
 
-  VALID_FIELDS = ['name','location']
+  VALID_FIELDS = ['id','location']
 
   attr_accessor :distance
 
