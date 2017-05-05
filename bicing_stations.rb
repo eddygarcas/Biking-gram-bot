@@ -8,19 +8,21 @@ class BicingStations
   def initialize
   end
 
-  def closest_station(telegram_loc, taken = 2)
-    nearby_stations(telegram_loc).sort_by{ |station| distance(telegram_loc,station)}.take(taken)
+  def closest_station(location= [], taken = 2)
+    raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.empty?
+    nearby_stations(location).sort_by{ |station| distance(location,station)}.take(taken)
   end
 
-  def nearby_network(telegram_loc)
+  def nearby_network(location = [])
+    raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.empty?
     parse_networks(CitybikesApi.networks({:fields => "name,location"})).
-    sort_by{ |network| distance(telegram_loc,network)}.first
+    sort_by{ |network| distance(location,network)}.first
   end
 
   protected
 
-  def nearby_stations(telegram_loc)
-    parse_stations(CitybikesApi.network(nearby_network(telegram_loc).name.downcase))
+  def nearby_stations(location)
+    parse_stations(CitybikesApi.network(nearby_network(location).name.downcase))
   end
 
   private
@@ -40,16 +42,16 @@ class BicingStations
   end
 
 
-  def distance telegram_loc, station
+  def distance location, station
     station_loc = [station.latitude,station.longitude]
     rad_per_deg = Math::PI/180  # PI / 180
     rkm = 6371                  # Earth radius in kilometers
     rm = rkm * 1000             # Radius in meters
 
-    dlat_rad = (station_loc[0]-telegram_loc[0]) * rad_per_deg  # Delta, converted to rad
-    dlon_rad = (station_loc[1]-telegram_loc[1]) * rad_per_deg
+    dlat_rad = (station_loc[0]-location[0]) * rad_per_deg  # Delta, converted to rad
+    dlon_rad = (station_loc[1]-location[1]) * rad_per_deg
 
-    lat1_rad, lon1_rad = telegram_loc.map {|i| i * rad_per_deg }
+    lat1_rad, lon1_rad = location.map {|i| i * rad_per_deg }
     lat2_rad, lon2_rad = station_loc.map {|i| i * rad_per_deg }
 
     a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2
@@ -57,5 +59,7 @@ class BicingStations
     station.distance=(rm*c)
     rm*c
   end
+
+  #private_class_method :new
 end
 

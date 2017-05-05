@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42417153-59bc-4d80-92c2-2d66450c1e69" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Fitxer_000.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Fitxer_001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Fitxer_002.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Fitxer_003.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Fitxer_004.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bicing_stations.rb" afterPath="$PROJECT_DIR$/bicing_stations.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/give_bicing_stations_test.rb" afterPath="$PROJECT_DIR$/give_bicing_stations_test.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/BotBicingGram@Run_test__give_bicing_stations_test___BotBicingGram.coverage" NAME="Run test 'give_bicing_stations_test': BotBicingGram Coverage Results" MODIFIED="1493970518126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
+    <SUITE FILE_PATH="coverage/BotBicingGram@Run_test__give_bicing_stations_test___BotBicingGram.coverage" NAME="Run test 'give_bicing_stations_test': BotBicingGram Coverage Results" MODIFIED="1493981627045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
     <SUITE FILE_PATH="coverage/BotBicingGram@bcn_bicing_bot.coverage" NAME="bot_bicing_gram Coverage Results" MODIFIED="1493216786933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" MODULE_NAME="BotBicingGram" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -37,8 +35,18 @@
       <file leaf-file-name="bicing_stations.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bicing_stations.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="288">
+              <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -54,31 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Procfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bot_message.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot_message.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="response.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/httparty-0.14.0/lib/httparty/response.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -87,9 +75,32 @@
       <file leaf-file-name="citybikes_api.rb" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/citybikes_api-2.0.1/lib/citybikes_api.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="0">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bot_message.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bot_message.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="36">
+                <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -97,18 +108,8 @@
       <file leaf-file-name="give_bicing_stations_test.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/give_bicing_stations_test.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="station_information.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/station_information.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="349">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -117,7 +118,7 @@
       <file leaf-file-name="network_information.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network_information.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="0">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
@@ -127,7 +128,7 @@
       <file leaf-file-name="testcase.rb" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/test-unit-3.2.3/lib/test/unit/testcase.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8676">
+            <state relative-caret-position="0">
               <caret line="482" column="0" lean-forward="false" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
               <folding />
             </state>
@@ -171,9 +172,9 @@
         <option value="$PROJECT_DIR$/helpers/bot_helper.rb" />
         <option value="$PROJECT_DIR$/station_information.rb" />
         <option value="$PROJECT_DIR$/network_information.rb" />
+        <option value="$PROJECT_DIR$/bot_bicing_gram.rb" />
         <option value="$PROJECT_DIR$/give_bicing_stations_test.rb" />
         <option value="$PROJECT_DIR$/bicing_stations.rb" />
-        <option value="$PROJECT_DIR$/bot_bicing_gram.rb" />
       </list>
     </option>
   </component>
@@ -185,8 +186,105 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1234" />
-    <option name="height" value="777" />
+    <option name="width" value="1865" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Assignment issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>Flow type checkerJavaScript</id>
+          </State>
+          <State>
+            <id>Gems</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsCoffeeScript</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>Rails</id>
+          </State>
+          <State>
+            <id>Ruby</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Action Cable</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -253,7 +351,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -473,7 +571,7 @@
       <updated>1493115095565</updated>
       <workItem from="1493115096883" duration="34756000" />
       <workItem from="1493551065699" duration="30704000" />
-      <workItem from="1493969984489" duration="1686000" />
+      <workItem from="1493969984489" duration="5953000" />
     </task>
     <task id="LOCAL-00001" summary="This commit contains the first version of BCN Bicing Bot for Telegram.&#10;This bot will allow user to look for the closest bicing station to their location.">
       <created>1493204285480</created>
@@ -657,43 +755,50 @@
       <option name="project" value="LOCAL" />
       <updated>1493970630910</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Documentation">
+      <created>1493972386369</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1493972386369</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 17h 30m 17s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 38m 11s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 17h 41m 47s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 39m 30s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 03m 44s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 42m 51s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 05m 09s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 43m 14s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 06m 00s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 45m 30s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 06m 39s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 45m 59s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 09m 18s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 48m 42s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 09m 55s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 48m 55s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.04 at 18h 15m 03s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 50m 26s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 09h 50m 08s.xml">
+    <history-entry file="Run_test_'give_bicing_stations_test'__BotBicingGram - 2017.05.05 at 12h 53m 48s.xml">
       <configuration name="Run test 'give_bicing_stations_test': BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67146000" />
+    <option name="totallyTimeSpent" value="71413000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,20 +810,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1234" height="777" extended-state="6" />
+    <frame x="0" y="23" width="1865" height="1057" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24412751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15962699" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47257385" sideWeight="0.18456376" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.104865775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.4966443" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896066" sideWeight="0.31795302" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23612513" sideWeight="0.4966443" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896066" sideWeight="0.31795302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896066" sideWeight="0.49328858" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47257385" sideWeight="0.81543624" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32795155" sideWeight="0.81543624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -736,7 +841,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This commit contains the first version of BCN Bicing Bot for Telegram.&#10;This bot will allow user to look for the closest bicing station to their location." />
     <MESSAGE value="Added the option to look for another station in case the closest one doesn't have free bikes&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the option to look for another station in case the closest one doesn't have free bikes&#10;" />
+    <MESSAGE value="Documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,11 +852,16 @@
           <line>19</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/bicing_stations.rb</url>
+          <line>11</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="92" />
+      <option name="time" value="96" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -801,6 +912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -872,6 +984,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -915,6 +1028,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="232" column="0" lean-forward="false" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -967,16 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-90">
-            <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1010,13 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1025,6 +1122,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1044,14 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/citybikes_api-2.0.1/lib/citybikes_api.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/httparty-0.14.0/lib/httparty/response.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1060,17 +1150,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/test-unit-3.2.3/lib/test/unit/testcase.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8676">
-          <caret line="482" column="0" lean-forward="false" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/station_information.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="0">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
@@ -1078,32 +1160,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network_information.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="0">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot_message.rb">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/citybikes_api-2.0.1/lib/citybikes_api.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/test-unit-3.2.3/lib/test/unit/testcase.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="482" column="0" lean-forward="false" selection-start-line="482" selection-start-column="0" selection-end-line="482" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bicing_stations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="288">
+          <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/give_bicing_stations_test.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="349">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1116,11 +1222,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/bot_message.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="true" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+        <state relative-caret-position="205">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="36">
+            <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
