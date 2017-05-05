@@ -6,8 +6,8 @@ require_relative'network_information'
 
 class BicingStations
 
-  @@logger = Logger.new(STDOUT)
-  @@logger.level = Logger::INFO
+  # @@logger = Logger.new(STDOUT)
+  # @@logger.level = Logger::INFO
 
   def initialize
 
@@ -15,7 +15,7 @@ class BicingStations
 
   def closest_station(location= [], taken = 2)
     raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.empty?
-    @@logger.info("BicingStations.closest_station location:#{location}")
+    # @@logger.info("BicingStations.closest_station location:#{location}")
     nearby_stations(location).sort_by{ |station| distance(location,station)}.take(taken)
   end
 
