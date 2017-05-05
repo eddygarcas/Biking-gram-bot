@@ -21,3 +21,20 @@ On the other hand, *bicing_stations.rb imports citybik API
     gem 'telegram-bot-ruby', '~> 0.7.2'
     gem 'citybikes_api', '~> 2.0', '>= 2.0.1'
     
+### Procfile
+
+In order to run this application in Heroku must include a Procfile adding the following config line
+
+    Web: bundle exec ruby bot_bicing_gram.rb
+
+# 2. Testing BotBicinGram
+
+Before starting this app in Heroku it's imperative adding a couple of environment variables. First one would be the Telegram Token string generated at creating the bot, and the other one would be the number of closest stations to retrieve from Citybike API.
+
+    TELEGRAM_BOT_TOKEN 
+    N_OF_STATIONS
+    
+ 
+    
+
+
