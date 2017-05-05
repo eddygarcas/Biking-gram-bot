@@ -9,6 +9,7 @@ GEM
       httparty (~> 0.13)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
+    concurrent-ruby (1.0.5)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.11)
@@ -17,9 +18,16 @@ GEM
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     ice_nine (0.11.2)
+    json (2.1.0)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     power_assert (0.4.1)
+    rack (2.0.1)
+    raygun4ruby (2.2.0)
+      concurrent-ruby
+      httparty (> 0.13.7)
+      json
+      rack
     telegram-bot-ruby (0.7.2)
       faraday
       virtus
@@ -37,6 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   citybikes_api (~> 2.0, >= 2.0.1)
+  raygun4ruby
   telegram-bot-ruby (~> 0.7.2)
   test-unit
 
