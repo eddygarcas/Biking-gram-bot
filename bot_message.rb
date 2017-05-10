@@ -3,7 +3,7 @@ class BotMessage
 
   def self.send_start_message(bot, chatId, markup)
     bot.api.send_message(chat_id: chatId,
-                         text: "%Q{Thanks for using BotBicingram. Share your location and I'll show you the closest station}" ,
+                         text: %Q{Thanks for using BotBicingram. Share your location and I'll show you the closest station} ,
                          reply_markup: markup)
   end
 
