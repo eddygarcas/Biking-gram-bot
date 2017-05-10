@@ -21,8 +21,7 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
         BotMessage.send_station_message(bot, message.chat.id, station.pop)
       else
         unless (message.text.nil? || message.text.start_with?('At'))
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: "Sorry, don't know what #{message.text} means, try typing /start instead.")
+          BotMessage.send_station_message(bot, message.chat.id)
         end
     end
   end

@@ -3,13 +3,13 @@ class BotMessage
 
   def self.send_start_message(bot, chatId, markup)
     bot.api.send_message(chat_id: chatId,
-                         text: "Thanks for using BotBicingram. Share your location and I'll show you the closest station" ,
+                         text: "%Q{Thanks for using BotBicingram. Share your location and I'll show you the closest station}" ,
                          reply_markup: markup)
   end
 
-  def self.send_station_message (bot, chatId, station)
+  def self.send_station_message (bot, chatId, station = nil)
     if station.nil?
-      bot.api.send_message(chat_id: chatId, text: %Q{Sorry! I've lost your position, could you please share it again?})
+      bot.api.send_message(chat_id: chatId, text: %Q{Oops! Something went worng, please either share your location or type /start again.})
     else
       send_station_location( bot, chatId, station)
       send_bot_text_message(bot, chatId, station)
