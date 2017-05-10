@@ -8,7 +8,11 @@ class BotHelper
     Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb)
   end
 
-  def self.get_stations (localtion, size = 2)
-    BicingStations.new.closest_station([localtion.latitude,localtion.longitude], size)
+  def self.get_stations (location, size = 2)
+    begin
+      return BicingStations.new.closest_station([location.latitude,location.longitude], size)
+    rescue StandardError
+      return []
+    end
   end
 end

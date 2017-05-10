@@ -21,30 +21,39 @@ class BicingStations
 
   def nearby_network(location = [])
     raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.empty?
-    parse_networks(CitybikesApi.networks({:fields => "id,location"})).
-    sort_by{ |network| distance(location,network)}.first
+    parse_factory(CitybikesApi.networks({:fields => "id,location"})).
+    sort_by{ |network| distance(location,network)}.first.id.downcase
   end
+
 
   protected
 
   def nearby_stations(location)
-    parse_stations(CitybikesApi.network(nearby_network(location).id.downcase))
+    parse_factory(CitybikesApi.network(nearby_network(location)))
+  end
+
+  def parse_factory(data)
+    case data.code
+      when 200
+        if data.has_key?('network')
+            parse data.parsed_response['network']['stations'], StationInformation
+          else
+            parse data.parsed_response['networks'], NetworkInformation
+        end
+      else
+         raise StandardError.new('Cannot connect with the remote service, please try it later.')
+    end
   end
 
   private
 
-  def parse_stations(data)
-    data.parsed_response['network']['stations'].map {
-        |station|
-      StationInformation.new(station)
-    }
-  end
 
-  def parse_networks(data)
-    data.parsed_response['networks'].map {
-        |network|
-     NetworkInformation.new(network)
-    }
+  def parse (data, class_instance)
+    begin
+      data.map {|elem| class_instance.new(elem)}
+    rescue Exception
+      raise StandardError.new('Cannot parse the service response')
+    end
   end
 
 

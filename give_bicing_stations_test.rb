@@ -1,7 +1,8 @@
 require 'test/unit'
+require 'mocha/test_unit'
 require 'pp'
 require_relative 'bicing_stations'
-#require_relative 'bot_bicing_gram'
+#require_relative'bot_bicing_gram'
 
 class GiveBicingStationsTest < Test::Unit::TestCase
 
@@ -11,8 +12,16 @@ class GiveBicingStationsTest < Test::Unit::TestCase
     @biking_stations = BicingStations.new
   end
 
-  def  test_the_closest_bicing_stations
-    assert_not_nil(pp @biking_stations.closest_station([41.493875,2.074632]))
+  def  test_network_call_retrun_an_error_code
+    mocked_element = BicingStations.new
+    mocked_element.stubs(:nearby_network).returns('hj')
+    assert_raise StandardError do
+      pp mocked_element.closest_station([41.493875,2.074632])
+    end
+  end
+
+  def test_closest_station_for_a_given_location
+    assert_not_nil( pp @biking_stations.closest_station([41.493875,2.074632]))
   end
 
   def test_closest_network
@@ -30,8 +39,6 @@ class GiveBicingStationsTest < Test::Unit::TestCase
       @biking_stations.nearby_network([])
     end
   end
-  # Called after every test method runs. Can be used to tear
-  # down fixture information.
 
   def teardown
     # Do nothing
