@@ -20,6 +20,10 @@ class NetworkInformation
     end
   end
 
+  def self.suitable_station?(elem, action = nil)
+    true
+  end
+
   private
 
   def create_method(key,value)

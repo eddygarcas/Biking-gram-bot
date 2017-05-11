@@ -13,10 +13,10 @@ class BicingStations
 
   end
 
-  def closest_station(location= [], taken = 2)
+  def closest_station(location= [], action = nil, taken = 2)
     raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.empty?
     @@logger.info("BicingStations.closest_station location:#{location}")
-    nearby_stations(location).sort_by{ |station| distance(location,station)}.take(taken)
+    nearby_stations(location, action).sort_by{ |station| distance(location,station)}.take(taken)
   end
 
   def nearby_network(location = [])
@@ -28,15 +28,15 @@ class BicingStations
 
   protected
 
-  def nearby_stations(location)
-    parse_factory(CitybikesApi.network(nearby_network(location)))
+  def nearby_stations(location, action = nil)
+    parse_factory(CitybikesApi.network(nearby_network(location)), action)
   end
 
-  def parse_factory(data)
+  def parse_factory(data, action = nil)
     case data.code
       when 200
         if data.has_key?('network')
-            parse data.parsed_response['network']['stations'], StationInformation
+            parse data.parsed_response['network']['stations'], StationInformation, action
           else
             parse data.parsed_response['networks'], NetworkInformation
         end
@@ -47,15 +47,17 @@ class BicingStations
 
   private
 
-
-  def parse (data, class_instance)
+  def parse (data, class_instance, action = nil)
     begin
-      data.map {|elem| class_instance.new(elem)}
+      elements = data.map { |elem|
+        class_instance.new(elem) if class_instance.suitable_station?(elem, action)
+      }
     rescue Exception
       raise StandardError.new('Cannot parse the service response')
     end
+    #Won't use compact! here due to will retrun a nil array rather than a copy of the array without the nil values
+    return elements.compact
   end
-
 
   def distance location, station
     station_loc = [station.latitude,station.longitude]
@@ -75,6 +77,5 @@ class BicingStations
     rm*c
   end
 
-  #private_class_method :new
 end
 

@@ -1,10 +1,16 @@
 
 class BotMessage
 
-  def self.send_start_message(bot, chatId, markup)
-    bot.api.send_message(chat_id: chatId,
-                         text: %Q{Thanks for using BotBicingram. Share your location and I'll show you the closest station} ,
-                         reply_markup: markup)
+  def self.send_start_message(bot, chatId, markup, text = nil)
+    if text.nil?
+      bot.api.send_message(chat_id: chatId,
+                           text: %Q{Thanks for using BotBikinGram. This bot will filter out those stations without either empty spots or free bikes according to your selection. Share your location and I'll show you the closest station.} ,
+                           reply_markup: markup)
+    else
+      bot.api.send_message(chat_id: chatId,
+                           text: %Q{#{text}} ,
+                           reply_markup: markup)
+    end
   end
 
   def self.send_station_message (bot, chatId, station = nil)
@@ -24,8 +30,5 @@ class BotMessage
 
   def self.send_bot_text_message(bot, chatId, station)
     bot.api.send_message(chat_id: chatId, text: station.to_s)
-    if station.free_bikes== 0
-      bot.api.send_message(chat_id: chatId, text: %Q{Ups! there aren't free bikes there try another station see if anyone available there})
-    end
   end
 end
