@@ -18,8 +18,7 @@ class BotHelper
       location = [eval(data)[:latitude],eval(data)[:longitude]]
       action = eval(data)[:a]
       return BicingStations.new.closest_station(location, action, size)
-    rescue StandardError => std_e
-      pp std_e
+    rescue StandardError
       return []
     end
   end
