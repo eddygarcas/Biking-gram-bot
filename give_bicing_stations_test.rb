@@ -2,7 +2,7 @@ require 'test/unit'
 require 'mocha/test_unit'
 require 'pp'
 require_relative 'bicing_stations'
-require_relative'bot_bicing_gram'
+#require_relative'bot_bicing_gram'
 
 class GiveBicingStationsTest < Test::Unit::TestCase
 

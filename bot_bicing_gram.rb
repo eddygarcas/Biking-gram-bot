@@ -1,5 +1,5 @@
 require 'telegram/bot'
-require_relative 'station_information'
+require_relative 'data/station_information'
 require_relative 'helpers/bot_helper'
 require_relative'bot_message'
 
