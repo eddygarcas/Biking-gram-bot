@@ -22,6 +22,11 @@ class BotMessage
     end
   end
 
+  def self.send_inline_markup (bot, chatId, results)
+
+
+  end
+
   protected
 
   def self.send_station_location(bot,chatId, station)

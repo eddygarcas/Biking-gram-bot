@@ -4,15 +4,16 @@ require_relative 'helpers/bot_helper'
 require_relative'bot_message'
 
 
-TELEGRAM_BOT_TOKEN= ENV['TELEGRAM_BOT_TOKEN']
-SIZE_OF_CLOSEST_STATIONS= ENV['N_OF_STATIONS']
+TELEGRAM_BOT_TOKEN= "391868557:AAEydTKqwJjD6uYyUuLzEhBFmejqZOk0u9k" #ENV['TELEGRAM_BOT_TOKEN']
+SIZE_OF_CLOSEST_STATIONS= 1 #ENV['N_OF_STATIONS']
 
 Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
-  station = Array.new
   bot.listen do |message|
     case message
       when Telegram::Bot::Types::CallbackQuery
         station = BotHelper.get_stations(message.data, SIZE_OF_CLOSEST_STATIONS.to_i)
+
+        #bot.api.answer_inline_query(inline_query_id: message.id, results: BotHelper.inline_result(station.reverse!.pop))
         BotMessage.send_station_message(bot, message.from.id, station.reverse!.pop)
       when Telegram::Bot::Types::Message
         if message.location
@@ -21,8 +22,6 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
         case message.text
           when '/start'
             BotMessage.send_start_message(bot, message.chat.id, BotHelper.bot_markup)
-          when 'Next station'
-            BotMessage.send_station_message(bot, message.chat.id, station.pop)
           else
             unless (message.text.nil? || message.text.start_with?('At'))
               BotMessage.send_station_message(bot, message.chat.id)
