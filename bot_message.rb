@@ -17,7 +17,7 @@ class BotMessage
     if station.nil?
       bot.api.send_message(chat_id: chatId, text: %Q{Oops! Something went wrong, please either share your location or type /start again.})
     else
-      send_station_location( bot, chatId, station)
+      send_station_location(bot, chatId, station)
       send_bot_text_message(bot, chatId, station)
     end
   end

@@ -4,7 +4,7 @@ class BotHelper
 
   def self.bot_markup
     kb = [Telegram::Bot::Types::KeyboardButton.new(text: 'Share my location', request_location: true)]
-    Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb)
+    Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, resize_keyboard: true)
   end
 
   def self.inline_markup (location = nil)

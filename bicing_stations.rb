@@ -56,7 +56,7 @@ class BicingStations
       raise StandardError.new('Cannot parse the service response')
     end
     #Won't use compact! here due to will retrun a nil array rather than a copy of the array without the nil values
-    return elements.compact
+    elements.compact
   end
 
   def distance location, station
