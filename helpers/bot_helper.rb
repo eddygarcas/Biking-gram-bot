@@ -3,9 +3,15 @@ require_relative '../data/location'
 
 class BotHelper
 
-  def self.get_stations (data, size = 1)
+  def self.get_stations_inline(data, size = 1)
+
+    get_stations(data.location,data.query.downcase.include?('drop') ? 'd' : 'p', size)
+
+  end
+
+  def self.get_stations (data, action = 'p', size = 1)
     begin
-      BicingStations.new.closest_station(Location.new(data), size)
+      BicingStations.new.closest_station(Location.new(data, action), size)
     rescue StandardError
       return []
     end
@@ -23,12 +29,11 @@ class BotHelper
   end
 
   def self.inline_result (station)
-    Telegram::Bot::Types::InlineQueryResultLocation.new(id: 1, latitude: station.latitude,
+    Telegram::Bot::Types::InlineQueryResultLocation.new(type: 'location', id: 1, latitude: station.latitude,
      longitude: station.longitude,
-     title: 'Closest Station',
-     reply_markup: inline_markup(location),
-     input_message_content: Telegram::Bot::Types::InputTextMessageContent.new(message_text: station.to_s)
-     )
+     title: 'Closest Station')
+     #input_message_content: Telegram::Bot::Types::InputTextMessageContent.new(message_text: station.to_s)
+
   end
 
 

@@ -4,6 +4,7 @@ require 'pp'
 require_relative 'bicing_stations'
 require_relative 'helpers/bot_helper'
 require_relative 'data/location'
+require 'telegram/bot'
 #require_relative'bot_bicing_gram'
 
 class GiveBicingStationsTest < Test::Unit::TestCase
@@ -14,6 +15,22 @@ class GiveBicingStationsTest < Test::Unit::TestCase
     @biking_stations = BicingStations.new
 
     @location = Location.new("{:latitude =>41.493875,:longitude => 2.074632, :a =>'p'}")
+
+    @inlineQuery_drop = Telegram::Bot::Types::InlineQuery.new(
+        id: 1,
+        from: Telegram::Bot::Types::User.new(id: 1, first_name: 'Edu'),
+        location: Telegram::Bot::Types::Location.new(longitude: 2.074632, latitude: 41.493875),
+        query: 'drop',
+        offset: ''
+    )
+
+    @inlineQuery_pickup = Telegram::Bot::Types::InlineQuery.new(
+        id: 1,
+        from: Telegram::Bot::Types::User.new(id: 1, first_name: 'Edu'),
+        location: Telegram::Bot::Types::Location.new(longitude: 2.074632, latitude: 41.493875),
+        query: 'Pickup',
+        offset: ''
+    )
   end
 
   def  test_network_call_retrun_an_error_code
@@ -25,7 +42,7 @@ class GiveBicingStationsTest < Test::Unit::TestCase
   end
 
   def test_closest_station_for_a_given_location
-    assert_equal(41.437053,@biking_stations.closest_station(@location)[0].latitude)
+    assert_equal(41.42968,@biking_stations.closest_station(@location)[0].latitude)
 
     assert_not_nil( pp @biking_stations.closest_station(@location))
   end
@@ -51,6 +68,14 @@ class GiveBicingStationsTest < Test::Unit::TestCase
 
     assert_not_nil( pp BotHelper.get_stations("{:latitude =>41.493875,:longitude => 2.074632, :a =>'p'}"))
 
+  end
+
+  def test_bot_helper_get_sations_from_inlineQuery_drop
+    assert_not_nil (pp BotHelper.get_stations_inline(@inlineQuery_drop))
+  end
+
+  def test_bot_helper_get_stations_from_inlineQuery_pickup
+    assert_not_nil(pp BotHelper.get_stations_inline(@inlineQuery_pickup))
   end
 
   def teardown
