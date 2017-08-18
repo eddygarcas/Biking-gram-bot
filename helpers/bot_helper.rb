@@ -29,11 +29,17 @@ class BotHelper
   end
 
   def self.inline_result (station)
-    Telegram::Bot::Types::InlineQueryResultLocation.new(type: 'location', id: 1, latitude: station.latitude,
-     longitude: station.longitude,
-     title: 'Closest Station')
-     #input_message_content: Telegram::Bot::Types::InputTextMessageContent.new(message_text: station.to_s)
-
+    Telegram::Bot::Types::InlineQueryResultLocation.new(
+        id:'1',
+        latitude: station.latitude,
+        longitude: station.longitude,
+        title:'Closest Station',
+        input_message_content: Telegram::Bot::Types::InputVenueMessageContent.new(
+            latitude: station.latitude,
+            longitude: station.longitude,
+            title: station.name,
+            address: station.to_inline
+        ))
   end
 
 

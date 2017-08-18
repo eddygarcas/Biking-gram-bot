@@ -41,4 +41,7 @@ class StationInformation < Information
     %Q{At #{distance} in #{name} street, you'll find \nEmpty Slots #{empty_slots} \nFree bikes  #{free_bikes}}
   end
 
+  def to_inline
+    %Q{At #{distance}\n Empty #{empty_slots}\n Free #{free_bikes}}
+  end
 end
