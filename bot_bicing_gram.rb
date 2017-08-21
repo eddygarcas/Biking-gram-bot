@@ -4,8 +4,9 @@ require_relative 'helpers/bot_helper'
 require_relative 'bot_message'
 
 
-TELEGRAM_BOT_TOKEN = "391868557:AAEydTKqwJjD6uYyUuLzEhBFmejqZOk0u9k"
-SIZE_OF_CLOSEST_STATIONS = 1
+TELEGRAM_BOT_TOKEN       = ENV['TELEGRAM_BOT_TOKEN']
+SIZE_OF_CLOSEST_STATIONS =  ENV['N_OF_STATIONS']
+
 
 Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
   bot.listen do |message|
@@ -21,9 +22,9 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
 
       when Telegram::Bot::Types::Message
         if message.venue && message.venue.location
-          BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup,'What would you like to do next?')
+          BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup,BOT_ACTION_MESSAGE)
         elsif message.location
-          BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup(message.location),'What action over the given location?')
+          BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup(message.location),BOT_ACTION_MESSAGE)
         end
 
         case message.text

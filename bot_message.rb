@@ -1,10 +1,10 @@
-START_BOT_MESSAGE = "Thanks for using BikinGram.\nThis bot will filter out those stations with either empty spots or free bikes according to your location.\nWhat would you like to do? Pickup or Drop."
+START_BOT_MESSAGE = "Thanks for using BikinGram.\nThis bot will filter out those stations with either empty spots or free bikes according to your location.\nWould you like to..."
 
 BOT_ERROR_MESSAGE = "Oops! Something went wrong, please press /start button again."
 
-BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according from your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
+BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according to your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
 
-BOT_ACTION_MESSAGE = "What would you like to do next?"
+BOT_ACTION_MESSAGE = "Would you like to..."
 
 class BotMessage
 
