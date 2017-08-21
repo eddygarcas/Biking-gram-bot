@@ -5,7 +5,8 @@ require_relative 'bicing_stations'
 require_relative 'helpers/bot_helper'
 require_relative 'data/location'
 require 'telegram/bot'
-#require_relative'bot_bicing_gram'
+
+
 
 class GiveBicingStationsTest < Test::Unit::TestCase
 
