@@ -6,6 +6,8 @@ BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the i
 
 BOT_ACTION_MESSAGE = "Would you like to..."
 
+require_relative 'helpers/bot_helper'
+
 class BotMessage
 
 
@@ -21,25 +23,42 @@ class BotMessage
     end
   end
 
-  def self.send_station_message (bot, chatId, station = nil)
+  def self.send_station_message(bot, chatId, station = nil, inline = false)
     if station.nil?
       bot.api.send_message(chat_id: chatId, text: %Q{#{BOT_ERROR_MESSAGE}})
     else
-      send_station_location(bot, chatId, station)
+      send_station_location(bot, chatId, station, inline)
     end
   end
 
 
-
   protected
 
-  def self.send_station_location(bot, chatId, station)
-    bot.api.send_venue(chat_id: chatId,
-        latitude: station.latitude,
-        longitude: station.longitude,
-        title: station.name,
-        address: station.to_inline
+  def self.send_station_location(bot, chatId, station, inline = false)
+    if inline
+      send_inline_station_location(bot, chatId, station)
+    else
+      send_callback_station_location(bot, chatId, station)
+    end
+
+  end
+
+  private
+
+  def self.send_inline_station_location(bot, chatId, station)
+    bot.api.answer_inline_query(
+        inline_query_id: chatId,
+        results: [BotHelper.inline_result(station)]
     )
   end
 
- end
+  def self.send_callback_station_location(bot, chatId, station)
+    bot.api.send_venue(chat_id: chatId,
+                       latitude: station.latitude,
+                       longitude: station.longitude,
+                       title: station.name,
+                       address: station.to_inline
+    )
+  end
+
+end

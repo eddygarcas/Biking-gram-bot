@@ -16,7 +16,7 @@ class BotHelper
   end
 
   def self.bot_markup
-    kb = [[Telegram::Bot::Types::KeyboardButton.new(text: '/start'),Telegram::Bot::Types::KeyboardButton.new(text: '/help')]]
+    kb = [[Telegram::Bot::Types::KeyboardButton.new(text: 'Start'),Telegram::Bot::Types::KeyboardButton.new(text: 'Help')]]
     Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, resize_keyboard: true)
   end
 
@@ -27,7 +27,7 @@ class BotHelper
 
   def self.inline_result (station)
     Telegram::Bot::Types::InlineQueryResultLocation.new(
-        id:'2',
+        id:'1',
         latitude: station.latitude,
         longitude: station.longitude,
         title: station.to_inline_title,

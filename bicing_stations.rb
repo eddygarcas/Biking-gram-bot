@@ -10,9 +10,7 @@ class BicingStations
   @@logger = Logger.new(STDOUT)
   @@logger.level = Logger::INFO
 
-  def initialize
-
-  end
+  def initialize; end
 
   def closest_station(location, taken = 1)
     raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.nil?
