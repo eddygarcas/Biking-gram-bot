@@ -8,7 +8,6 @@ TELEGRAM_BOT_TOKEN = ENV['TELEGRAM_BOT_TOKEN']
 SIZE_OF_CLOSEST_STATIONS = ENV['N_OF_STATIONS']
 
 
-
 Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
   bot.listen do |message|
     case message
@@ -18,7 +17,7 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
 
       when Telegram::Bot::Types::InlineQuery
         station = BotHelper.get_stations_inline(message, SIZE_OF_CLOSEST_STATIONS.to_i)
-        BotMessage.send_station_location(bot, message.id, station.reverse!.pop, true)
+        BotMessage.send_station_message(bot, message.id, station, true)
 
       when Telegram::Bot::Types::Message
         if message.venue && message.venue.location

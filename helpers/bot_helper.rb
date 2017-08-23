@@ -25,9 +25,20 @@ class BotHelper
     Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
   end
 
-  def self.inline_result (station)
+  def self.inline_result(station)
+    result = []
+    if arr = Array.try_convert(station)
+      count = 0
+      result = arr.map { |elem| create_inline_station_result(elem, count+=1) }
+    else
+      result << create_inline_station_result(station)
+    end
+    return result
+  end
+
+  def self.create_inline_station_result(station, count = 1)
     Telegram::Bot::Types::InlineQueryResultLocation.new(
-        id:'1',
+        id: count.to_s,
         latitude: station.latitude,
         longitude: station.longitude,
         title: station.to_inline_title,

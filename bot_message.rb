@@ -48,7 +48,7 @@ class BotMessage
   def self.send_inline_station_location(bot, chatId, station)
     bot.api.answer_inline_query(
         inline_query_id: chatId,
-        results: [BotHelper.inline_result(station)]
+        results: BotHelper.inline_result(station)
     )
   end
 

@@ -79,6 +79,14 @@ class GiveBicingStationsTest < Test::Unit::TestCase
     assert_not_nil(pp BotHelper.get_stations_inline(@inlineQuery_pickup))
   end
 
+  def test_bot_helper_inline_result_multiple_stations
+    result = BotHelper.get_stations_inline(@inlineQuery_pickup, 5)
+    arr = BotHelper.inline_result(result)
+    assert_not_nil(Array.try_convert(arr))
+    assert_equal('1',arr[0].id)
+    assert_equal('2',arr[1].id)
+  end
+
   def teardown
     # Do nothing
   end
