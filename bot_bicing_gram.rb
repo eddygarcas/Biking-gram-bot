@@ -8,6 +8,7 @@ TELEGRAM_BOT_TOKEN = ENV['TELEGRAM_BOT_TOKEN']
 SIZE_OF_CLOSEST_STATIONS = ENV['N_OF_STATIONS']
 
 
+
 Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
   bot.listen do |message|
     case message
@@ -29,7 +30,7 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
         case message.text
           when 'Help'
             BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup, BOT_HELP_MESSAGE)
-          when 'Start'
+          when 'Start' || '/start'
             BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup)
           else
             unless (message.text.nil? || message.text.start_with?('At'))

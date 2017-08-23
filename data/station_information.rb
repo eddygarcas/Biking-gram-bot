@@ -38,14 +38,14 @@ class StationInformation < Information
   end
 
   def to_inline_title
-    %Q{At #{distance} in #{name} street}
+    %Q{At #{distance} in #{name} street E #{empty_slots} F #{free_bikes}}
   end
+
+  # def to_s
+  #   %Q{At #{distance} in #{name} street, you'll find \nEmpty Slots #{empty_slots} \nFree bikes  #{free_bikes}}
+  # end
 
   def to_s
-    %Q{At #{distance} in #{name} street, you'll find \nEmpty Slots #{empty_slots} \nFree bikes  #{free_bikes}}
-  end
-
-  def to_inline
     %Q{At #{distance}\n Empty #{empty_slots}\n Free #{free_bikes}}
   end
 

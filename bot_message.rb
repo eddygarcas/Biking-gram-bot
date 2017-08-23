@@ -57,7 +57,7 @@ class BotMessage
                        latitude: station.latitude,
                        longitude: station.longitude,
                        title: station.name,
-                       address: station.to_inline
+                       address: station.to_s
     )
   end
 

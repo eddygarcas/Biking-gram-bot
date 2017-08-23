@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42417153-59bc-4d80-92c2-2d66450c1e69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BotBicingGram.iml" afterPath="$PROJECT_DIR$/.idea/BotBicingGram.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot_bicing_gram.rb" afterPath="$PROJECT_DIR$/bot_bicing_gram.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot_message.rb" afterPath="$PROJECT_DIR$/bot_message.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/give_bicing_stations_test.rb" afterPath="$PROJECT_DIR$/give_bicing_stations_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/station_information.rb" afterPath="$PROJECT_DIR$/data/station_information.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/bot_helper.rb" afterPath="$PROJECT_DIR$/helpers/bot_helper.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +23,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BotBicingGram@Run_test__give_bicing_stations_test___BotBicingGram.coverage" NAME="Run test 'give_bicing_stations_test': BotBicingGram Coverage Results" MODIFIED="1503481140840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
     <SUITE FILE_PATH="coverage/BotBicingGram@bcn_bicing_bot.coverage" NAME="bot_bicing_gram Coverage Results" MODIFIED="1493216786933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" MODULE_NAME="BotBicingGram" />
-    <SUITE FILE_PATH="coverage/BotBicingGram@bot_bicing_gram.coverage" NAME="bot_bicing_gram Coverage Results" MODIFIED="1503481761177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
+    <SUITE FILE_PATH="coverage/BotBicingGram@bot_bicing_gram.coverage" NAME="bot_bicing_gram Coverage Results" MODIFIED="1503488981848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
     <SUITE FILE_PATH="coverage/BotBicingGram@test_bot_helper_inline_result_multiple_stations__BotBicingGram.coverage" NAME="test_bot_helper_inline_result_multiple_stations: BotBicingGram Coverage Results" MODIFIED="1503481265989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
     <SUITE FILE_PATH="coverage/BotBicingGram@All_tests_in_BotBicingGram__BotBicingGram.coverage" NAME="All tests in BotBicingGram: BotBicingGram Coverage Results" MODIFIED="1503309124610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
   </component>
@@ -65,8 +64,18 @@
       <file leaf-file-name="bot_helper.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+            <state relative-caret-position="184">
+              <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="station_information.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/station_information.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,7 +114,7 @@
       <file leaf-file-name="bot_bicing_gram.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot_bicing_gram.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
+            <state relative-caret-position="108">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
@@ -115,18 +124,8 @@
       <file leaf-file-name="bot_message.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot_message.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ruby-debug-ide.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta4/lib/ruby-debug-ide.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="1188">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -185,11 +184,11 @@
         <option value="$PROJECT_DIR$/data/location.rb" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/BotBicingGram.iml" />
-        <option value="$PROJECT_DIR$/data/station_information.rb" />
         <option value="$PROJECT_DIR$/bicing_stations.rb" />
-        <option value="$PROJECT_DIR$/bot_message.rb" />
-        <option value="$PROJECT_DIR$/helpers/bot_helper.rb" />
         <option value="$PROJECT_DIR$/give_bicing_stations_test.rb" />
+        <option value="$PROJECT_DIR$/data/station_information.rb" />
+        <option value="$PROJECT_DIR$/helpers/bot_helper.rb" />
+        <option value="$PROJECT_DIR$/bot_message.rb" />
         <option value="$PROJECT_DIR$/bot_bicing_gram.rb" />
       </list>
     </option>
@@ -343,6 +342,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="helpers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="BotBicingGram">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="docs">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -738,7 +751,7 @@
       <workItem from="1494876630494" duration="163000" />
       <workItem from="1494925116424" duration="1189000" />
       <workItem from="1495035354489" duration="12868000" />
-      <workItem from="1503302068570" duration="21056000" />
+      <workItem from="1503302068570" duration="22480000" />
     </task>
     <task id="LOCAL-00001" summary="This commit contains the first version of BCN Bicing Bot for Telegram.&#10;This bot will allow user to look for the closest bicing station to their location.">
       <created>1493204285480</created>
@@ -1055,7 +1068,14 @@
       <option name="project" value="LOCAL" />
       <updated>1503472130896</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Adding Inline functionality as well as allowing the user to pin any other location, not just the current one, that would allow the user to share results on other chat rooms.">
+      <created>1503481848145</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1503481848145</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1091,7 +1111,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153663000" />
+    <option name="totallyTimeSpent" value="155087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1105,7 +1125,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896066" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47257385" sideWeight="0.18456376" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.104865775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1400,10 +1420,10 @@
         <state relative-caret-position="270">
           <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
-            <marker date="1503481838000" expanded="true" signature="87200:87242" ph="..." />
-            <marker date="1503481838000" expanded="true" signature="87200:87260" ph="..." />
-            <marker date="1503481838000" expanded="true" signature="87200:87273" ph="..." />
-            <marker date="1503481838000" expanded="true" signature="87200:87288" ph="..." />
+            <marker date="1503489093000" expanded="true" signature="88020:88062" ph="..." />
+            <marker date="1503489093000" expanded="true" signature="88020:88080" ph="..." />
+            <marker date="1503489093000" expanded="true" signature="88020:88093" ph="..." />
+            <marker date="1503489093000" expanded="true" signature="88020:88108" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1427,14 +1447,6 @@
     <entry file="file://$PROJECT_DIR$/data/location.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/station_information.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-538">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1464,14 +1476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/telegram-bot-ruby-0.7.2/lib/telegram/bot/api.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1484,14 +1488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot_message.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1512,14 +1508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/give_bicing_stations_test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
@@ -1528,9 +1516,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/station_information.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot_message.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bot_bicing_gram.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
+        <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
