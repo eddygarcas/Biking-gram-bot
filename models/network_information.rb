@@ -1,5 +1,4 @@
 require_relative 'information'
-
 class NetworkInformation < Information
 
   VALID_FIELDS = ['id','location']
