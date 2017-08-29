@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'mocha/test_unit'
 require 'pp'
-require_relative 'bicing_stations'
+require_relative 'helpers/bicing_stations'
 require_relative 'helpers/bot_helper'
 require_relative 'data/location'
 require 'telegram/bot'

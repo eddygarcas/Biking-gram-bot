@@ -1,8 +1,8 @@
 require 'citybikes_api'
 require 'logger'
-require_relative 'data/station_information'
-require_relative 'data/network_information'
-require_relative 'data/location'
+require_relative '../data/station_information'
+require_relative '../data/network_information'
+require_relative '../data/location'
 
 
 class BicingStations

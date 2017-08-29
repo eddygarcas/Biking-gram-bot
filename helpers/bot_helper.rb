@@ -1,4 +1,4 @@
-require_relative'../bicing_stations'
+
 require_relative '../data/location'
 
 class BotHelper
