@@ -1,7 +1,7 @@
 require 'telegram/bot'
 require_relative 'data/station_information'
 require_relative 'helpers/bot_helper'
-require_relative 'bot_message'
+require_relative './bot_message'
 
 
 TELEGRAM_BOT_TOKEN = ENV['TELEGRAM_BOT_TOKEN']
