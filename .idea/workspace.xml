@@ -6,13 +6,18 @@
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42417153-59bc-4d80-92c2-2d66450c1e69" name="Default" comment="Inline multiple results">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bot_message.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bicing_stations.rb" afterPath="$PROJECT_DIR$/helpers/bicing_stations.rb" />
+    <list default="true" id="42417153-59bc-4d80-92c2-2d66450c1e69" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/information.rb" afterPath="$PROJECT_DIR$/models/information.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/location.rb" afterPath="$PROJECT_DIR$/models/location.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/network_information.rb" afterPath="$PROJECT_DIR$/models/network_information.rb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/station_information.rb" afterPath="$PROJECT_DIR$/models/station_information.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BotBicingGram.iml" afterPath="$PROJECT_DIR$/.idea/BotBicingGram.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bot_bicing_gram.rb" afterPath="$PROJECT_DIR$/bot_bicing_gram.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/give_bicing_stations_test.rb" afterPath="$PROJECT_DIR$/give_bicing_stations_test.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/bicing_stations.rb" afterPath="$PROJECT_DIR$/helpers/bicing_stations.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/bot_helper.rb" afterPath="$PROJECT_DIR$/helpers/bot_helper.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +32,7 @@
     <SUITE FILE_PATH="coverage/BotBicingGram@bcn_bicing_bot.coverage" NAME="bot_bicing_gram Coverage Results" MODIFIED="1493216786933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" MODULE_NAME="BotBicingGram" />
     <SUITE FILE_PATH="coverage/BotBicingGram@bot_bicing_gram.coverage" NAME="bot_bicing_gram Coverage Results" MODIFIED="1503488981848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
     <SUITE FILE_PATH="coverage/BotBicingGram@test_bot_helper_inline_result_multiple_stations__BotBicingGram.coverage" NAME="test_bot_helper_inline_result_multiple_stations: BotBicingGram Coverage Results" MODIFIED="1503481265989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
-    <SUITE FILE_PATH="coverage/BotBicingGram@All_tests_in_BotBicingGram__BotBicingGram.coverage" NAME="All tests in BotBicingGram: BotBicingGram Coverage Results" MODIFIED="1504019382710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
+    <SUITE FILE_PATH="coverage/BotBicingGram@All_tests_in_BotBicingGram__BotBicingGram.coverage" NAME="All tests in BotBicingGram: BotBicingGram Coverage Results" MODIFIED="1504019676892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="BotBicingGram" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -43,11 +48,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bicing_stations.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bicing_stations.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/bicing_stations.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="198">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,17 +72,27 @@
         <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot_bicing_gram.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bot_bicing_gram.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot_bicing_gram.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,7 +132,6 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Gemfile.lock" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/factories/parse_factory.rb" />
         <option value="$PROJECT_DIR$/station_information.rb" />
         <option value="$PROJECT_DIR$/network_information.rb" />
@@ -134,6 +148,7 @@
         <option value="$PROJECT_DIR$/helpers/bicing_stations.rb" />
         <option value="$PROJECT_DIR$/helpers/bot_helper.rb" />
         <option value="$PROJECT_DIR$/bot_bicing_gram.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -271,6 +286,20 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="BotBicingGram">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="BotBicingGram">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="models">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -658,7 +687,7 @@
       <workItem from="1503592766308" duration="582000" />
       <workItem from="1503665869377" duration="850000" />
       <workItem from="1503931059156" duration="1343000" />
-      <workItem from="1504011832594" duration="1530000" />
+      <workItem from="1504011832594" duration="1833000" />
     </task>
     <task id="LOCAL-00001" summary="This commit contains the first version of BCN Bicing Bot for Telegram.&#10;This bot will allow user to look for the closest bicing station to their location.">
       <created>1493204285480</created>
@@ -989,25 +1018,17 @@
       <option name="project" value="LOCAL" />
       <updated>1503489122265</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Inline multiple results">
+      <created>1504019408067</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1504019408067</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 16h 57m 14s.xml">
-      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 16h 57m 54s.xml">
-      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 16h 58m 01s.xml">
-      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 16h 58m 17s.xml">
-      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 16h 58m 19s.xml">
-      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 16h 58m 39s.xml">
       <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
@@ -1023,9 +1044,24 @@
     <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 17h 09m 48s.xml">
       <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 17h 10m 46s.xml">
+      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 17h 10m 59s.xml">
+      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 17h 11m 07s.xml">
+      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 17h 12m 51s.xml">
+      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_tests_in_BotBicingGram__BotBicingGram - 2017.08.29 at 17h 14m 48s.xml">
+      <configuration name="All tests in BotBicingGram: BotBicingGram" configurationId="TestUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160048000" />
+    <option name="totallyTimeSpent" value="160351000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,9 +1082,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47257385" sideWeight="0.18456376" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.104865775" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23612513" sideWeight="0.4966443" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32673267" sideWeight="0.31795302" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32673267" sideWeight="0.31795302" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630098" sideWeight="0.49328858" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32531825" sideWeight="0.49328858" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34657535" sideWeight="0.81543624" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1341,7 +1377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/information.rb">
+    <entry file="file://$PROJECT_DIR$/models/information.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1384,7 +1420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/location.rb">
+    <entry file="file://$PROJECT_DIR$/models/location.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1392,7 +1428,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/station_information.rb">
+    <entry file="file://$PROJECT_DIR$/models/station_information.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1400,15 +1436,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/network_information.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/models/network_information.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1424,10 +1452,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/bicing_stations.rb">
+    <entry file="file://$PROJECT_DIR$/bot_bicing_gram.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="108">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1443,15 +1479,15 @@
     <entry file="file://$PROJECT_DIR$/helpers/bot_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot_bicing_gram.rb">
+    <entry file="file://$PROJECT_DIR$/helpers/bicing_stations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

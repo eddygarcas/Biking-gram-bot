@@ -1,5 +1,5 @@
 
-require_relative '../data/location'
+require_relative '../models/location'
 
 class BotHelper
 
