@@ -6,7 +6,7 @@ BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the i
 
 BOT_ACTION_MESSAGE = "Would you like to..."
 
-require_relative 'helpers/bot_helper'
+require_relative 'bot_helper'
 
 class BotMessage
 
