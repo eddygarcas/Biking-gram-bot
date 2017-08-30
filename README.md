@@ -35,23 +35,29 @@ Before starting this app in Heroku it's imperative adding a couple of environmen
     N_OF_STATIONS
     
 ### Starting the bot
-Typing /start will show you the Keyboard markup used to share the current location or jumping to the next closest biking station
+Typing /start will show you the Keyboard markup used to share the current location or jumping to the next closest biking station. Two inline buttons will be prompt to know whether want to pick up a bike or drop it. Both buttons are using inline functionality so the bot won't ask to share user's location due to it will be send as part of the InlineQuery.
 
-<img src="https://github.com/eddygarcas/BotBicingGram/blob/master/docs/Fitxer_004.png" height="30%" width="30%"/>
+<img src="docs/Start.png" height="30%" width="30%"/>
+
+A list of stations will be display so the user can choose which one fits better although the bot already filters out those stations without either free spots or bike according to previous selection (PickUp or Drop)
+
+<img src="docs/Inline.png" height="30%" width="30%"/>
 
 ### Sharing current location
-Clicking over "Share my location" Telegram will ask the allowance to share the current location.
+User may also want to share a custom location to share the result with other user later on. 
+To do that just share a location and the bot will prompt the follwing screen.
 
-<img src="https://github.com/eddygarcas/BotBicingGram/blob/master/docs/Fitxer_003.png" height="30%" width="30%"/>
+<img src="docs/Custom_location.PNG" height="30%" width="30%"/>
 
-### Show the results
-BotBicinGram will use device position, looking for the closest stations acorss all bike sharing transportation systems around the world.
+It's basically the same as inline callback although this time it's using a CallbackQuery instead. The result of this will be the same.
 
-<img src="https://github.com/eddygarcas/BotBicingGram/blob/master/docs/Fitxer_002.png" height="30%" width="30%"/>
+<img src="docs/Result_custom_location.PNG" height="30%" width="30%"/>
 
-Clicking on Next stations will show the next closest station, it may be useful if the closest one has no free bikes or empty spots.
+### Help
 
-<img src="https://github.com/eddygarcas/BotBicingGram/blob/master/docs/Fitxer_001.png" height="30%" width="30%"/>
+This bot has a KeyboardMarkup containing just two buttons as well. The first one called 'Start' will reset the bot to the initial stage and the other one 'Help' will show a message with a list of available functionality.
+
+<img src="docs/Help.PNG" height="30%" width="30%"/>
 
 ### Final considerations
 
