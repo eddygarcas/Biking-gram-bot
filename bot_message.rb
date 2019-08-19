@@ -12,35 +12,19 @@ class BotMessage
 
 
   def self.send_bot_message(bot, chatId, markup, text = nil)
-    if text.nil?
-      bot.api.send_message(chat_id: chatId,
-                           text: %Q{#{START_BOT_MESSAGE}},
-                           reply_markup: markup)
-    else
-      bot.api.send_message(chat_id: chatId,
-                           text: %Q{#{text}},
-                           reply_markup: markup)
-    end
+    bot.api.send_message(chat_id: chatId,text: %Q{#{text.nil? ? START_BOT_MESSAGE : text }},reply_markup: markup)
   end
 
   def self.send_station_message(bot, chatId, station = nil, inline = false)
-    if station.nil?
-      bot.api.send_message(chat_id: chatId, text: %Q{#{BOT_ERROR_MESSAGE}})
-    else
-      send_station_location(bot, chatId, station, inline)
-    end
+    return if station.nil?
+    send_station_location(bot, chatId, station, inline)
   end
 
 
   protected
 
   def self.send_station_location(bot, chatId, station, inline = false)
-    if inline
-      send_inline_station_location(bot, chatId, station)
-    else
-      send_callback_station_location(bot, chatId, station)
-    end
-
+    inline ? send_inline_station_location(bot, chatId, station) : send_callback_station_location(bot, chatId, station)
   end
 
   private
