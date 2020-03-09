@@ -6,7 +6,7 @@ If you are using any bike sharing transportation, you can try this out by adding
 
 Please let me know if you find any issue using this bot.
 
-# 1. Installing external ruby gems
+## 1. Installing external ruby gems
 
 The file *bot_bicing_gram.rb* requires Telegram Bot
 
@@ -27,7 +27,7 @@ In order to run this application in Heroku must include a Procfile adding the fo
 
     Web: bundle exec ruby bot_bicing_gram.rb
 
-# 2. Testing BotBicinGram
+## 2. Testing Biking Gram bot
 
 Before starting this app in Heroku it's imperative adding a couple of environment variables. First one would be the Telegram Token string generated at creating the bot, and the other one would be the number of closest stations to retrieve from Citybike API.
 
