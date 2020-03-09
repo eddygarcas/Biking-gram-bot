@@ -1,4 +1,4 @@
-# BotBicinGram
+# Biking Gram Bot
 
 Bot Biking gram feeds from Citybikes API, getting data from there will allow you to search for the closest bike sharing station available. Citybikes API has data from more than 400 Cities bike sharing transportation projects.
 
