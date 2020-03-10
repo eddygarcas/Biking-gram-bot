@@ -1,6 +1,6 @@
 # Biking Gram Bot
 
-Bot Biking gram feeds from Citybikes API, getting data from there will allow you to search for the closest bike sharing station available. Citybikes API has data from more than 400 Cities bike sharing transportation projects.
+Bot Biking gram feeds from Citybikes API (http://api.citybik.es/v2/), getting data from there will allow you to search for the closest bike sharing station available. Citybikes API has data from more than 400 Cities bike sharing transportation projects.
 
 If you are using any bike sharing transportation, you can try this out by adding this bot in your telegram app: https://telegram.me/bikingram_bot
 

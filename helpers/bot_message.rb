@@ -3,7 +3,7 @@ require 'emoji_flag'
 
 module BotMessage
 
-  START_BOT_MESSAGE = "Thanks for using BikinGram.\nThis bot will filter out those stations with either empty spots or free bikes according to your location.\nWould you like to..."
+  START_BOT_MESSAGE = "Thanks for using BikinGram it feeds from http://api.citybik.es to filter out those stations with either empty spots or free bikes closer to your location.\nWould you like to..."
   BOT_ERROR_MESSAGE = "Oops! Something went wrong, please press /start button again."
   BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according to your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
   BOT_ACTION_MESSAGE = "Would you like to..."
