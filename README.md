@@ -12,7 +12,7 @@ The file *bot_bicing_gram.rb* requires Telegram Bot
 
     require 'telegram/bot'
 
-On the other hand, *bicing_stations.rb imports citybik API
+On the other hand, *bicing_stations.rb* imports citybik API
 
     require 'citybikes_api'
 
