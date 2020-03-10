@@ -22,9 +22,10 @@ module BotHelper
     Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, resize_keyboard: true)
   end
 
+  # shared_inline_location_markup(location) it's used when a user sends a location on the map or shares actual location again.
   def self.inline_markup (location = nil)
-    #kb = location.nil? ? chat_inline_location_markup : shared_inline_location_markup(location)
-    Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: chat_inline_location_markup)
+    kb = location.nil? ? chat_inline_location_markup : shared_inline_location_markup(location)
+    Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
   end
 
   def self.inline_result(station)
