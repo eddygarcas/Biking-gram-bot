@@ -2,11 +2,12 @@ require_relative 'information'
 
 class StationInformation < Information
 
-  VALID_FIELDS = ['id','empty_slots','free_bikes','latitude','longitude','name']
+  VALID_FIELDS = ['id', 'empty_slots', 'free_bikes', 'latitude', 'longitude', 'name']
 
+  attr_accessor :company, :action
   @distance = 0
 
-  def distance=dist
+  def distance= dist
     @distance = (result = dist.round / 1000) > 1 ? "#{result}Km." : "#{dist.round}m."
   end
 
@@ -14,39 +15,39 @@ class StationInformation < Information
     @distance
   end
 
-  # id
-  # empty_slots
-  # free_bikes
-  # latitude
-  # longitude
-  # name
-  def initialize(sta)
-    sta.each do |k,v|
-      if VALID_FIELDS.include?(k)
-        accesor_builder k,v
-      end
+  def initialize(sta, action, net)
+    VALID_FIELDS.each do |elm|
+      v = nested_hash_value(sta, elm.to_s)
+      accesor_builder elm, v.to_s
+    end
+    self.company = net
+    self.action = action
+  end
+
+  def self.parse data, action = nil
+    begin
+      net = NetworkInformation.new(data.parsed_response['network'])
+      data.parsed_response['network']['stations'].map { |elem| StationInformation.new(elem, action, net) if StationInformation.suitable_station?(elem, action) }.compact
+    rescue Exception
+      raise StandardError.new('Cannot parse the service response')
     end
   end
 
-
   def self.suitable_station?(elem, action = nil)
     return true if action.nil?
-    ( (action.eql?('p') &&
-    elem['free_bikes'].eql?(0)) ||
-    (action.eql?('d') &&
-    elem['empty_slots'].eql?(0)) ) ? false : true
+    ((action.eql?('p') &&
+        elem['free_bikes'].eql?(0)) ||
+        (action.eql?('d') &&
+            elem['empty_slots'].eql?(0))) ? false : true
   end
 
   def to_inline_title
-    %Q{At #{distance} in #{name} street E #{empty_slots} F #{free_bikes}}
+    return %Q{in #{distance} #{empty_slots} empty slots } unless action.to_s.eql?('p')
+    return %Q{in #{distance} has #{free_bikes} bikes } unless action.to_s.eql?('d')
   end
 
-  # def to_s
-  #   %Q{At #{distance} in #{name} street, you'll find \nEmpty Slots #{empty_slots} \nFree bikes  #{free_bikes}}
-  # end
-
   def to_s
-    %Q{At #{distance}\n Empty #{empty_slots}\n Free #{free_bikes}}
+    %Q{in #{distance}\n #{empty_slots} empty slots\n and #{free_bikes} bikes}
   end
 
 end

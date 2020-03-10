@@ -20,7 +20,7 @@ class BicingStations
 
   def nearby_network(location)
     raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.nil?
-    parse_factory(CitybikesApi.networks({:fields => "id,location"})).
+    parse_factory(CitybikesApi.networks({:fields => "id,location,company,name"})).
     sort_by{ |network| distance(location,network)}.first.id.downcase
   end
 
@@ -35,9 +35,9 @@ class BicingStations
     case data.code
       when 200
         if data.has_key?('network')
-            parse data.parsed_response['network']['stations'], StationInformation, action
-          else
-            parse data.parsed_response['networks'], NetworkInformation
+          StationInformation.parse(data,action)
+        else
+          NetworkInformation.parse(data.parsed_response['networks'])
         end
       else
          raise StandardError.new('Cannot connect with the remote service, please try it later.')
@@ -45,18 +45,6 @@ class BicingStations
   end
 
   private
-
-  def parse (data, class_instance, action = nil)
-    begin
-      elements = data.map { |elem|
-        class_instance.new(elem) if class_instance.suitable_station?(elem, action)
-      }
-    rescue Exception
-      raise StandardError.new('Cannot parse the service response')
-    end
-    #Won't use compact! here due to will retrun a nil array rather than a copy of the array without the nil values
-    elements.compact
-  end
 
   def distance location, station
     station_loc = [station.latitude,station.longitude]

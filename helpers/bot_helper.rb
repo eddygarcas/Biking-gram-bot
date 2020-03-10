@@ -21,8 +21,8 @@ class BotHelper
   end
 
   def self.inline_markup (location = nil)
-    kb = location.nil? ? chat_inline_location_markup : shared_inline_location_markup(location)
-    Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: kb)
+    #kb = location.nil? ? chat_inline_location_markup : shared_inline_location_markup(location)
+    Telegram::Bot::Types::InlineKeyboardMarkup.new(inline_keyboard: chat_inline_location_markup)
   end
 
   def self.inline_result(station)
@@ -41,11 +41,11 @@ class BotHelper
         id: count.to_s,
         latitude: station.latitude,
         longitude: station.longitude,
-        title: station.to_inline_title,
+        title: %Q{ #{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.to_inline_title}},
         input_message_content: Telegram::Bot::Types::InputVenueMessageContent.new(
             latitude: station.latitude,
             longitude: station.longitude,
-            title: station.name,
+            title: %Q{ #{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.name}},
             address: station.to_s
         ))
   end
