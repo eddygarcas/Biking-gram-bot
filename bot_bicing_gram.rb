@@ -1,7 +1,7 @@
 require 'telegram/bot'
 require_relative 'data/station_information'
 require_relative 'helpers/bot_helper'
-require_relative 'bot_message'
+require_relative 'helpers/bot_message'
 
 TELEGRAM_BOT_TOKEN = ENV['TELEGRAM_BOT_TOKEN']
 SIZE_OF_CLOSEST_STATIONS = ENV['N_OF_STATIONS']
@@ -19,20 +19,20 @@ Telegram::Bot::Client.run(TELEGRAM_BOT_TOKEN) do |bot|
 
     when Telegram::Bot::Types::Message
       if message.venue && message.venue.location
-        BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup, BOT_ACTION_MESSAGE)
+        BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup, BotMessage::BOT_ACTION_MESSAGE)
       elsif message.location
-        BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup(message.location), BOT_ACTION_MESSAGE)
+        BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup(message.location), BotMessage::BOT_ACTION_MESSAGE)
       end
       case message.text
       when 'Help'
-        BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup, BOT_HELP_MESSAGE)
+        BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup, BotMessage::BOT_HELP_MESSAGE)
       when 'Start'
         BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup)
       when '/start'
         BotMessage.send_bot_message(bot, message.chat.id, BotHelper.inline_markup)
       else
         unless (message.text.nil? || message.text.downcase.start_with?('in'))
-          BotMessage.send_bot_message(bot, message.chat.id, BotHelper.bot_markup, BOT_ERROR_MESSAGE)
+          BotMessage.send_bot_message(bot, message.chat.id, BotHelper.bot_markup, BotMessage::BOT_ERROR_MESSAGE)
         end
       end
     end

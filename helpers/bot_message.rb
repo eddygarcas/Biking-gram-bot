@@ -1,12 +1,12 @@
-require_relative 'helpers/bot_helper'
+require_relative 'bot_message'
 require 'emoji_flag'
 
-START_BOT_MESSAGE = "Thanks for using BikinGram.\nThis bot will filter out those stations with either empty spots or free bikes according to your location.\nWould you like to..."
-BOT_ERROR_MESSAGE = "Oops! Something went wrong, please press /start button again."
-BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according to your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
-BOT_ACTION_MESSAGE = "Would you like to..."
+module BotMessage
 
-class BotMessage
+  START_BOT_MESSAGE = "Thanks for using BikinGram.\nThis bot will filter out those stations with either empty spots or free bikes according to your location.\nWould you like to..."
+  BOT_ERROR_MESSAGE = "Oops! Something went wrong, please press /start button again."
+  BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according to your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
+  BOT_ACTION_MESSAGE = "Would you like to..."
 
   def self.send_bot_message(bot, chatId, markup, text = nil)
     bot.api.send_message(chat_id: chatId,text: %Q{#{text.nil? ? START_BOT_MESSAGE : text }},reply_markup: markup)

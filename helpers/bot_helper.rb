@@ -1,7 +1,7 @@
 require_relative'../bicing_stations'
 require_relative '../data/location'
 
-class BotHelper
+module BotHelper
 
   def self.get_stations_inline(data, size = 1)
     get_stations(data.location,data.query&.downcase&.include?('drop') ? 'd' : 'p', size) if ['pickup','drop'].include? data.query&.downcase
@@ -16,7 +16,9 @@ class BotHelper
   end
 
   def self.bot_markup
-    kb = [[Telegram::Bot::Types::KeyboardButton.new(text: 'Start'),Telegram::Bot::Types::KeyboardButton.new(text: 'Help')],[Telegram::Bot::Types::KeyboardButton.new(text: 'Share location', request_location: true)]]
+    kb = [[Telegram::Bot::Types::KeyboardButton.new(text: 'Start'),
+           Telegram::Bot::Types::KeyboardButton.new(text: 'Help')],
+          [Telegram::Bot::Types::KeyboardButton.new(text: 'Share location', request_location: true)]]
     Telegram::Bot::Types::ReplyKeyboardMarkup.new(keyboard: kb, resize_keyboard: true)
   end
 

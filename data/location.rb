@@ -1,33 +1,31 @@
-
 class Location
 
   attr_accessor :latitude, :longitude, :action
 
   def initialize (element, action = 'p')
-
     case element
       when String
         loc = eval(element)
-        @latitude = loc[:latitude]
-        @longitude = loc[:longitude]
-        @action = loc[:a]
+        self.latitude = loc[:latitude]
+        self.longitude = loc[:longitude]
+        self.action = loc[:a]
       when Telegram::Bot::Types::Location
-        @latitude = element.latitude
-        @longitude = element.longitude
-        @action = action
+        self.latitude = element.latitude
+        self.longitude = element.longitude
+        self.action = action
     end
   end
 
   def to_s
-    %Q{"Latitude: {#@latitude} Longitude: {#@longitude}"}
+    %Q{"Latitude: #{latitude} Longitude: #{longitude}"}
   end
 
   def to_a
-    [@latitude, @longitude]
+    [latitude, longitude]
   end
 
   def to_callback_loc
-    {:latitude => @latitude , :longitude => @longitude, :a => @action}.to_s
+    {:latitude => latitude , :longitude => longitude, :a => action}.to_s
   end
 
 end
