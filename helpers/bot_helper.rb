@@ -42,14 +42,16 @@ module BotHelper
   def self.create_inline_station_result(station, count = 1)
     Telegram::Bot::Types::InlineQueryResultLocation.new(
         id: count.to_s,
-        latitude: station.latitude.to_f,
-        longitude: station.longitude.to_f,
-        title: %Q{ #{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.to_inline_title}},
+        latitude: station.latitude,
+        longitude: station.longitude,
+        title: %Q{ <pre>#{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.to_inline_title}</pre>},
         input_message_content: Telegram::Bot::Types::InputVenueMessageContent.new(
             latitude: station.latitude,
             longitude: station.longitude,
             title: %Q{ #{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.name}},
-            address: station.to_s
+            address: station.to_html,
+            parse_mode: 'HTML',
+            disable_web_page_preview: false
         ))
   end
 

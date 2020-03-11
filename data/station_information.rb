@@ -50,4 +50,8 @@ class StationInformation < Information
     %Q{in #{distance}\n #{empty_slots} empty slots\n and #{free_bikes} bikes}
   end
 
+  def to_html
+    %Q{<pre>in #{distance}\n  <b>#{empty_slots}</b> empty slots\n and <b>#{free_bikes}</b> bikes</pre>}
+  end
+
 end
