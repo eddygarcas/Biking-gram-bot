@@ -3,15 +3,13 @@ require 'emoji_flag'
 
 module BotMessage
 
-  START_BOT_MESSAGE = "Thanks for usgin Bikingram! #{EmojiFlag.new('triangular-flag')}\nAll data is provided by http://api.citybik.es/"
+  START_BOT_MESSAGE = "Thanks for usgin Bikingram! #{EmojiFlag.new('triangular-flag')}\nAll data is provided by http://api.citybik.es/ \n"
   BOT_ERROR_MESSAGE = "Oops! Something went wrong, please press /start button again."
   BOT_HELP_MESSAGE = "Use inline buttons below (PickUp or Drop) here or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according to your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
   BOT_ACTION_MESSAGE = "Would you like to..."
 
   def self.send_bot_message(bot, chatId, markup, text = nil)
-    bot.api.send_message(chat_id: chatId,text: %Q{#{text.nil? ? START_BOT_MESSAGE : text }})
-    bot.api.send_message(chat_id: chatId,text: %Q{#{BOT_ACTION_MESSAGE}},reply_markup: markup)
-
+    bot.api.send_message(chat_id: chatId,text: %Q{#{text.nil? ? START_BOT_MESSAGE << BOT_ACTION_MESSAGE : text }},reply_markup: markup)
   end
 
   def self.send_station_message(bot, chatId, station = nil, inline = false)
