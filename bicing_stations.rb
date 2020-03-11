@@ -15,7 +15,9 @@ class BicingStations
   def closest_station(location, taken = 1)
     raise ArgumentError.new("Missing mandatory parameter location: #{location}") if location.nil?
     @@logger.info("BicingStations.closest_station location:#{location.to_s}")
-    nearby_stations(location).sort_by{ |station| distance(location,station)}.take(taken)
+    stations = nearby_stations(location).sort_by{ |station| distance(location,station)}.take(taken)
+    @@logger.info("BicingStations.closest_station info:#{stations.to_s}")
+    stations
   end
 
   def nearby_network(location)
