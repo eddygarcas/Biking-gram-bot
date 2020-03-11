@@ -44,14 +44,12 @@ module BotHelper
         id: count.to_s,
         latitude: station.latitude,
         longitude: station.longitude,
-        title: %Q{ <pre>#{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.to_inline_title}</pre>},
+        title: %Q{#{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.to_inline_title}},
         input_message_content: Telegram::Bot::Types::InputVenueMessageContent.new(
             latitude: station.latitude,
             longitude: station.longitude,
             title: %Q{ #{EmojiFlag.new(station.company.country)} #{station.company.name} #{station.name}},
-            address: station.to_html,
-            parse_mode: 'HTML',
-            disable_web_page_preview: false
+            address: station.to_s
         ))
   end
 
