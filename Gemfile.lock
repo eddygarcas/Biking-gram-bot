@@ -11,10 +11,10 @@ GEM
       descendants_tracker (~> 0.0.1)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    emoji_flag (0.1.1)
     equalizer (0.0.11)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
+    gemoji (3.0.1)
     httparty (0.14.0)
       multi_xml (>= 0.5.2)
     ice_nine (0.11.2)
@@ -43,7 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   citybikes_api (~> 2.0, >= 2.0.1)
-  emoji_flag
+  gemoji
   mocha
   telegram-bot-ruby (~> 0.11.0)
   test-unit

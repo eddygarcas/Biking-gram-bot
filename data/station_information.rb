@@ -2,7 +2,7 @@ require_relative 'information'
 
 class StationInformation < Information
 
-  VALID_FIELDS = ['id', 'empty_slots', 'free_bikes', 'latitude', 'longitude', 'name']
+  VALID_FIELDS = ['id', 'empty_slots', 'free_bikes', 'latitude', 'longitude', 'name','timestamp','extra']
 
   attr_accessor :company, :action
   @distance = 0
@@ -42,8 +42,8 @@ class StationInformation < Information
   end
 
   def to_inline_title
-    return %Q{in #{distance} #{empty_slots} empty slots } unless action.to_s.eql?('p')
-    return %Q{in #{distance} has #{free_bikes} bikes } unless action.to_s.eql?('d')
+    return %Q{at #{Emoji.find_by_alias('walking').raw} #{distance} #{empty_slots} empty slots } unless action.to_s.eql?('p')
+    return %Q{at #{Emoji.find_by_alias('walking').raw} #{distance} has #{free_bikes} bikes } unless action.to_s.eql?('d')
   end
 
   def to_s
