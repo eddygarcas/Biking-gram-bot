@@ -1,5 +1,5 @@
 require_relative 'bot_message'
-require 'emoji_flag'
+require 'gemoji'
 
 module BotMessage
 
