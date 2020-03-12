@@ -2,7 +2,7 @@ require_relative 'information'
 
 class StationInformation < Information
 
-  VALID_FIELDS = ['id', 'empty_slots', 'free_bikes', 'latitude', 'longitude', 'name','timestamp','extra']
+  VALID_FIELDS = ['id', 'empty_slots', 'free_bikes', 'latitude', 'longitude', 'name','timestamp','ebikes','extra']
 
   attr_accessor :company, :action
   @distance = 0
@@ -47,11 +47,11 @@ class StationInformation < Information
   end
 
   def to_s
-    %Q{in #{distance}\n #{empty_slots} empty slots\n and #{free_bikes} bikes}
+    %Q{in #{distance}\n #{empty_slots} empty\n #{Emoji.find_by_alias('bike').raw} #{free_bikes} bikes\n #{Emoji.find_by_alias('electric_plug').raw} #{ebikes || 0} e-bikes }
   end
 
   def to_html
-    %Q{<pre>in #{distance}\n  <b>#{empty_slots}</b> empty slots\n and <b>#{free_bikes}</b> bikes</pre>}
+    %Q{<pre>in #{distance}\n <b>#{empty_slots}</b> empty slots\n and <b>#{free_bikes}</b> bikes</pre>}
   end
 
 end
