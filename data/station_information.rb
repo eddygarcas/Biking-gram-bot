@@ -42,8 +42,8 @@ class StationInformation < Information
   end
 
   def to_inline_title
-    return %Q{at #{Emoji.find_by_alias('walking').raw} #{distance} #{empty_slots} empty slots } unless action.to_s.eql?('p')
-    return %Q{at #{Emoji.find_by_alias('walking').raw} #{distance} has #{free_bikes} bikes } unless action.to_s.eql?('d')
+    return %Q{in #{distance} #{empty_slots} empty slots } unless action.to_s.eql?('p')
+    return %Q{in #{distance} has #{free_bikes} bikes } unless action.to_s.eql?('d')
   end
 
   def to_s

@@ -1,5 +1,6 @@
 require_relative'../bicing_stations'
 require_relative '../data/location'
+require 'gemoji'
 
 module BotHelper
 
@@ -44,11 +45,11 @@ module BotHelper
         id: count.to_s,
         latitude: station.latitude,
         longitude: station.longitude,
-        title: %Q{ #{Emoji.find_by_alias(station.company.country).raw} #{station.company.name} #{station.to_inline_title}},
+        title: %Q{ #{Emoji.find_by_alias(station.company.country.downcase).raw} #{station.company.name} #{station.to_inline_title}},
         input_message_content: Telegram::Bot::Types::InputVenueMessageContent.new(
             latitude: station.latitude,
             longitude: station.longitude,
-            title: %Q{ #{Emoji.find_by_alias(station.company.country).raw} #{station.company.name} #{station.name}},
+            title: %Q{ #{Emoji.find_by_alias(station.company.country.downcase).raw} #{station.company.name} #{station.name}},
             address: station.to_s
         ))
   end
