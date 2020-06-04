@@ -3,7 +3,7 @@ require 'gemoji'
 
 module BotMessage
 
-  START_BOT_MESSAGE = "🧑‍💻Author @eddygarcas Github https://github.com/eddygarcas/gotsurfbot\nThanks for using Bikingram! #{Emoji.find_by_alias('bike').raw}\nAll data is provided by http://api.citybik.es/ \n🤖 Would you like to..."
+  START_BOT_MESSAGE = "🧑‍💻Author @eddygarcas Github https://github.com/eddygarcas\nThanks for using Bikingram! #{Emoji.find_by_alias('bike').raw}\nAll data is provided by http://api.citybik.es/ \n🤖 Would you like to..."
   BOT_ERROR_MESSAGE = "🤖 Oops! Something went wrong, please press /start button again."
   BOT_HELP_MESSAGE = "ℹ️ Use inline buttons below #{Emoji.find_by_alias('point_down').raw} (PickUp or Drop) here or type the inline command @bikingram_bot in any chat to find out the closest sharing bike station.\nThe result will be according to your actual position.\nYou can also pin any location and this bot will show you the closest station from that point."
   BOT_ACTION_MESSAGE = "🤖 Would you like to..."
